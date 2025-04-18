@@ -3,18 +3,20 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
-	private static BorderPane rootLayout;
+
+	private static Stage primaryStage;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			Main.primaryStage = primaryStage;
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainMenu.fxml"));
-			rootLayout = loader.load();
-			Scene scene = new Scene(rootLayout);
+			Parent root = loader.load(); // Ya no asumimos que es BorderPane
+			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Enrollment Software");
 			primaryStage.show();
@@ -22,16 +24,17 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void loadView(String fxmlFile) {
 		try {
-		FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxmlFile));
-		rootLayout.setCenter(loader.load());
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxmlFile));
+			Parent newView = loader.load();
+			Scene scene = new Scene(newView);
+			primaryStage.setScene(scene);
 		} catch (Exception e) {
-		e.printStackTrace();
+			e.printStackTrace();
 		}
-		}
-
+	}
 
 	public static void main(String[] args) {
 		launch(args);
