@@ -1,19 +1,35 @@
 package controller;
 
 import application.Main;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class MainMenuController {
-	
-    public void goToStudents() {
-        Main.loadView("Students.fxml");
+
+    @FXML
+    private Button btnCursos;
+
+    @FXML
+    private Button btnEstudiante;
+
+    @FXML
+    private Button btnInscripciones;
+
+    @FXML
+    void GoToInscripciones(ActionEvent event) {
+    	Main.loadScene("/view/Enrollment.fxml");
+    }
+    
+    @FXML
+    void GoToCursos(ActionEvent event) {
+    	Main.loadScene("/view/Course.fxml");
     }
 
-    public void goToCourses() {
-        Main.loadView("Courses.fxml");
-    }
+    @FXML
+    void GoToEstudiante(ActionEvent event) {
+    	Main.loadScene("/view/Students.fxml");
 
-    public void goToEnrollment() {
-        Main.loadView("Enrollments.fxml");
     }
 
 }

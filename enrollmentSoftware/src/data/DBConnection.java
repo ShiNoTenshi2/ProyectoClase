@@ -7,11 +7,11 @@ import java.sql.SQLException;
 public class DBConnection {
     private static DBConnection instance; //Singleton
     private Connection connection;
-	private final String username="ajerez";
-	private final String password="4j3r3z";
-	private final String host = "192.168.254.215";
+	private final String username="programacion";
+	private final String password="programacion";
+	private final String host = "192.168.1.11";
 	private final String port = "1521";
-	private final String service = "orcl";
+	private final String service = "xe";
 
     private DBConnection() {
         try {

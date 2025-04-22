@@ -22,7 +22,7 @@
          <Insets bottom="50.0" />
       </VBox.margin>
     </Label>
-    <Button prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Estudiantes">
+    <Button fx:id="btnEstudiante" onAction="#GoToEstudiante" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Estudiantes">
         <font>
             <Font size="18" />
         </font>
@@ -30,7 +30,7 @@
             <DropShadow color="#2980b9" radius="3" />
         </effect>
     </Button>
-    <Button prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Cursos">
+    <Button fx:id="btnCursos" onAction="#GoToCursos" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Cursos">
         <font>
             <Font size="18" />
         </font>
@@ -38,7 +38,7 @@
             <DropShadow color="#27ae60" radius="3" />
         </effect>
     </Button>
-   <Button prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #c93c20; -fx-text-fill: white; -fx-background-radius: 5;" text="Inscripciones">
+   <Button fx:id="btnInscripciones" onAction="#GoToInscripciones" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #c93c20; -fx-text-fill: white; -fx-background-radius: 5;" text="Inscripciones">
       <font>
          <Font size="18" />
       </font>
