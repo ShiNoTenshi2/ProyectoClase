@@ -23,7 +23,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
     public static void loadScene(String fxmlFile) {
         try {
             Parent root = FXMLLoader.load(Main.class.getResource(fxmlFile));
