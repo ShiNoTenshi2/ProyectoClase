@@ -20,6 +20,7 @@ public class Student {
         return name;
     }
 
+    
     public String getEmail() {
         return email;
     }
