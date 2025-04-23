@@ -1,6 +1,9 @@
 package data;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.Enrollment;
@@ -39,5 +42,15 @@ public class EnrollmentDAO {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	public int countEnrollmentsByCourse(String courseCode) {
+	    String sql = "SELECT COUNT(*) FROM ENROLLMENT WHERE COURSE_CODE = ?";
+	    try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+	        stmt.setString(1, courseCode);
+	        ResultSet rs = stmt.executeQuery();
+	        return rs.next() ? rs.getInt(1) : 0;
+	    } catch (SQLException e) {
+	        throw new RuntimeException("Error al contar inscripciones: " + e.getMessage(), e);
+	    }
+	}
 }
