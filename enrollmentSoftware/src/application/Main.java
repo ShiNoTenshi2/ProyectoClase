@@ -24,6 +24,7 @@ public class Main extends Application {
         }
     }
 
+	
     public static void loadScene(String fxmlFile) {
         try {
             Parent root = FXMLLoader.load(Main.class.getResource(fxmlFile));
