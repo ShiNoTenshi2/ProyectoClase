@@ -18,12 +18,12 @@ public class MainMenuController {
 
     @FXML
     void GoToInscripciones(ActionEvent event) {
-    	Main.loadScene("/view/Enrollment.fxml");
+    	Main.loadScene("/view/Enrollments.fxml");
     }
     
     @FXML
     void GoToCursos(ActionEvent event) {
-    	Main.loadScene("/view/Course.fxml");
+    	Main.loadScene("/view/Courses.fxml");
     }
 
     @FXML
