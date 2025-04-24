@@ -1,4 +1,5 @@
 package controller;
+//bien
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -77,7 +78,7 @@ public class LibraryCoursesController {
 
     @FXML
     void goToBack(ActionEvent event) {
-        Main.loadScene("/view/Course.fxml");
+        Main.loadScene("/view/Courses.fxml");
     }
 
     @FXML

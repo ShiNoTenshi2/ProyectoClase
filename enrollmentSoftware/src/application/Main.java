@@ -1,5 +1,6 @@
 package application;
-	
+//bien
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -24,6 +25,7 @@ public class Main extends Application {
         }
     }
 
+	
 	
     public static void loadScene(String fxmlFile) {
         try {
